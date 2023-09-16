@@ -36,4 +36,7 @@ def call(Map config) {
        }
    }
 }
-//Jenkinsfile jenkinsForJava repoUrl: 'https://github.com/brainupgrade-in/request-logger'
+//Jenkins Controller (import this repo as global lib using Jenkins settings)
+//Jenkinsfile
+//@Library('brainupgrade-shared-libs') _
+//jenkinsForJava (repoUrl: 'https://github.com/brainupgrade-in/spring-framework-petclinic.git', branch: 'main' )

@@ -14,7 +14,7 @@ def call(Map config) {
            }
            stage("Checkout Code") {
                steps {
-                   git branch: 'master',
+                   git branch: "${config.branch}",
                        url: "${config.repoUrl}"
                }
            }

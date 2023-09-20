@@ -4,7 +4,7 @@ def call(Map config) {
     pipeline {
         agent  {
             kubernetes {
-      defaultContainer 'jnlp'
+      defaultContainer 'maven'
       yaml '''
 apiVersion: v1
 kind: Pod

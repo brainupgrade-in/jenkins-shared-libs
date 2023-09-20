@@ -4,18 +4,18 @@ def call(Map config) {
     pipeline {
         agent  {
             kubernetes {
-                defaultContainer 'maven'
-                yaml '''
-                    apiVersion: v1
-                    kind: Pod
-                    spec:
-                    containers:
-                    - name: maven
-                        image: maven:3.8.3-openjdk-17
-                        command:
-                        - cat
-                        tty: true
-                   '''
+      defaultContainer 'jnlp'
+      yaml '''
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: maven
+    image: maven:3.8.3-openjdk-17
+    command:
+    - cat
+    tty: true
+'''
                 }
         }
 
